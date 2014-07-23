@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lista</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <div class="table-responsa"> 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="check"><input type="checkbox"></th>
+                    <th class="data">Data</th>
+                    <th class="composto"></th>
+                    <th class="categoria">Categoria</th>
+                    <th class="descricao">Descrição</th>
+                    <th class="centro">C. Custo/lucro</th>
+                    <th class="cliente-fornecedor">Cliente/Fornecedor</th>
+                    <th class="parcela">Parcela</th>                 
+                    <th class="valor">Valor</th>
+                    <th class="saldo">Saldo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="nao-realizado">
+                    <td class="check"><input type="checkbox"></td>
+                    <td class="data">22 dez</td>
+                    <td class="composto"></td>
+                    <td class="categoria">
+                        <span class="label label-warning">Alimentação</span>
+                    </td>
+                    <td class="descricao">
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui.
+                        </span>
+                    </td>
+                    <td class="centro">Filial Rio de Janeiro, Filial São Paulo, Filial Belo Horizonte </td>
+                    <td class="cliente-fornecedor">Companhia de abastecimento de água de São Paulo</td>
+                    <td class="parcela"><span class="label label-parcela">20/100</span></td>
+                    <td class="valor">380.000,00</td>
+                    <td class="saldo">25.000,00</td>
+                    <td class="acao"><span class="glyphicon glyphicon-time"></span> Receber</td>
+                </tr>
+
+                <tr class="nao-realizado">
+                    <td class="check"><input type="checkbox" disabled></td>
+                    <td class="data">27 dez</td>
+                    <td class="composto"><span class="glyphicon glyphicon-chevron-down"></span><span> 3</span></td>
+                    <td class="categoria">
+                        <span class="label label-warning">Alimentação</span>
+                        <span class="label label-primary">Pagamento de salários</span>
+                        <span class="label label-danger">Chutes</span>
+                    </td>
+                    <td class="descricao">
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui.
+                        </span>
+                    </td>
+                    <td class="centro">Matriz</td>
+                    <td class="cliente-fornecedor">Eletropaulo</td>
+                    <td class="parcela"><span class="label label-parcela">1/3</span></td>
+                    <td class="valor">30,00</td>
+                    <td class="saldo">13.025.000,00</td>
+                    <td class="acao">
+                        <span class="glyphicon glyphicon-time nao-realizado"></span> Receber
+                        <span class="glyphicon glyphicon-barcode"></span>
+                    </td>
+                </tr>
+                    <tr class="nao-realizado item-composto">
+                        <td class="check"></td>
+                        <td class="data"></td>
+                        <td class="composto"></td>
+                        <td class="categoria">
+                            <span class="label label-warning">Alimentação</span>
+                        </td>
+                        <td class="descricao">
+                            <span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui.
+                            </span>
+                        </td>
+                        <td class="centro">Matriz</td>
+                        <td class="cliente-fornecedor"></td>
+                        <td class="parcela"></td>
+                        <td class="valor">10,00</td>
+                        <td class="saldo"></td>
+                        <td class="acao"></td>
+                    </tr>
+                    <tr class="nao-realizado item-composto">
+                        <td class="check"></td>
+                        <td class="data"></td>
+                        <td class="composto"></td>
+                        <td class="categoria">
+                            <span class="label label-primary">Pagamento de salários</span>
+                        </td>
+                        <td class="descricao">
+                            <span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui.
+                            </span>
+                        </td>
+                        <td class="centro">Matriz</td>
+                        <td class="cliente-fornecedor"></td>
+                        <td class="parcela"></td>
+                        <td class="valor">10,00</td>
+                        <td class="saldo"></td>
+                        <td class="acao"></td>
+                    </tr>
+                    <tr class="nao-realizado item-composto">
+                        <td class="check"></td>
+                        <td class="data"></td>
+                        <td class="composto"></td>
+                        <td class="categoria">
+                            <span class="label label-danger">Chutes</span>
+                        </td>
+                        <td class="descricao">
+                            <span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui.
+                            </span>
+                        </td>
+                        <td class="centro">Matriz</td>
+                        <td class="cliente-fornecedor"></td>
+                        <td class="parcela"></td>
+                        <td class="valor">10,00</td>
+                        <td class="saldo"></td>
+                        <td class="acao"></td>
+                    </tr>
+
+                <tr class="realizado">
+                    <td class="check"><input type="checkbox"></td>
+                    <td class="data">31 dez</td>
+                    <td class="composto"><span class="glyphicon glyphicon-chevron-right"></span><span> 2</span></td>
+                    <td class="categoria">
+                        <span class="label label-success">Projeto Godzilla</span>
+                        <span class="label label-danger">Melancias</span>
+                    </td>
+                    <td class="descricao">
+                        <span> 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui.
+                        </span>
+                    </td>
+                    <td class="centro">Filial 1, Matriz</td>
+                    <td class="cliente-fornecedor">Companhia de abastecimento de água de São Paulo</td>
+                    <td class="parcela"><span class="label label-parcela"> <span class="glyphicon glyphicon-refresh"></span></span></td>
+                    <td class="valor">33.380.000,00</td>
+                    <td class="saldo">25.000,00</td>
+                    <td class="acao"><span class="glyphicon glyphicon-check"></span> Recebido</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>                                		

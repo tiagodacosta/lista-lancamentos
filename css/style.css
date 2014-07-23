@@ -1,0 +1,287 @@
+/*Estilos básicos tabela de lançamentos*/
+
+.table > thead > tr > th {
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 11px;
+	letter-spacing: 0.05em;
+}
+
+.table > tbody > tr > td {
+	font-size: 14px;
+	line-height: 2;
+	/*font-family: "roboto"*/
+}
+
+.table > tbody > tr.item-composto > td {
+	border-top:0;
+	padding:4px 8px;
+}
+
+.table > tbody > tr > td > .label {
+	letter-spacing: normal;
+}
+
+.table > thead > tr > th.check,
+.table > tbody > tr > td.check {
+	width: 20px;
+}
+
+.table > thead > tr > th.data,
+.table > tbody > tr > td.data {
+	width: 70px;
+}
+
+.table > thead > tr > th.composto,
+.table > tbody > tr > td.composto {
+	width: 30px;
+	padding-left:0;
+	padding-right: 0;
+}
+
+.table > thead > tr > th.categoria,
+.table > tbody > tr > td.categoria {
+	white-space:nowrap;
+	max-width:20px;
+	overflow:hidden;
+	text-overflow:clip;
+	position: relative;
+}
+
+.table > thead > tr > th.descricao,
+.table > tbody > tr > td.descricao {
+	white-space:nowrap;
+	max-width:40px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	position: relative;
+	padding-left:20px;
+}
+
+.table > thead > tr > th.centro,
+.table > tbody > tr > td.centro {
+	white-space:nowrap;
+	max-width:10px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	position: relative;
+}
+
+.table > thead > tr > th.cliente-fornecedor,
+.table > tbody > tr > td.cliente-fornecedor {
+	white-space:nowrap;
+	max-width:20px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	position: relative;
+}
+
+.table > thead > tr > th.parcela,
+.table > tbody > tr > td.parcela {
+	width: 50px;
+	text-align: right;
+}
+
+.table > thead > tr > th.valor,
+.table > tbody > tr > td.valor,
+.table > thead > tr > th.saldo,
+.table > tbody > tr > td.saldo {
+	width: 100px;
+	text-align: right;
+}
+
+.table > thead > tr > th.acao,
+.table > tbody > tr > td.acao{
+	width: 120px;
+}
+
+
+/*Estilos específicos tabela de lançamentos*/
+
+.table > tbody > tr > td.composto span {
+	font-size: 12px;
+	color:#999;
+}
+
+.table > tbody > tr > td.data{
+	font-weight: bold;
+	letter-spacing: -0.05em;
+} 
+
+.table > tbody > tr > td.categoria{
+
+}
+
+.table > tbody > tr > td.categoria:after{
+	display: block;
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content:" ";
+	background: -moz-linear-gradient(right, #FFFFFF 0%, transparent 100%);
+	background: -webkit-linear-gradient(right, #FFFFFF 0%,transparent 100%);
+	background: -o-linear-gradient(right, #FFFFFF 0%,transparent 100%);
+	background: -ms-linear-gradient(right, #FFFFFF 0%,transparent 100%);
+	background: linear-gradient(right, #000 0%,transparent 100%);
+}
+
+.table > tbody > tr > td.descricao{
+	color:#333;
+	font-weight: bold;
+	letter-spacing: -0.025em;
+}
+
+.table > tbody > tr > td.centro,
+.table > tbody > tr > td.cliente-fornecedor{
+	color:#999;
+	font-size: 12px;
+	line-height: 2.4;
+}
+
+.table > tbody > tr > td.valor{
+	color: #26A65B;
+	font-weight: bold;
+	letter-spacing: -0.025em;
+}
+
+.table > tbody > tr > td.saldo{
+	width: 100px;
+	color: #f81617;
+	letter-spacing: -0.05em;
+	font-size: 12px;
+	line-height: 2.4;
+	opacity: 0.75;
+}
+
+
+.label-parcela {
+  background-color: #ccc;
+  color: #333;
+}
+.label-parcela[href]:hover,
+.label-parcela[href]:focus {
+  background-color: #5e5e5e;
+}
+
+
+/*linha realizada*/
+
+.table > tbody > tr.realizado{
+	background-color: #eee;
+}
+
+.table > tbody > tr.realizado > td.data,
+.table > tbody > tr.realizado > td.descricao,
+.table > tbody > tr.realizado > td.valor,
+.table > tbody > tr.realizado > td.saldo{
+	font-weight: normal;
+	opacity: 0.75;
+}
+
+.table > tbody > tr.realizado > td.acao{
+	color: #999;
+}
+
+.table > tbody > tr.realizado > td.categoria:after{
+	background: -moz-linear-gradient(right, #EEEEEE 0%, transparent 100%);
+	background: -webkit-linear-gradient(right, #EEEEEE 0%,transparent 100%);
+	background: -o-linear-gradient(right, #EEEEEE 0%,transparent 100%);
+	background: -ms-linear-gradient(right, #EEEEEE 0%,transparent 100%);
+	background: linear-gradient(right, #EEEEEE 0%,transparent 100%);
+}
+
+/*linha hover*/
+
+.table > tbody > tr:hover {
+	background-color: #ffffd5;
+}
+
+.table > tbody > tr:hover > td.categoria:after{
+	background: -moz-linear-gradient(right, #ffffd5 0%, transparent 100%);
+	background: -webkit-linear-gradient(right, #ffffd5 0%,transparent 100%);
+	background: -o-linear-gradient(right, #ffffd5 0%,transparent 100%);
+	background: -ms-linear-gradient(right, #ffffd5 0%,transparent 100%);
+	background: linear-gradient(right, #ffffd5 0%,transparent 100%);
+}
+
+/*responsividade para telas menores*/
+
+@media screen and (max-width: 767px) {
+	.table > thead > tr > th.cliente-fornecedor,
+	.table > tbody > tr > td.cliente-fornecedor, 
+	.table > thead > tr > th.centro,
+	.table > tbody > tr > td.centro	{
+		display: none;
+	}
+
+	.table > tbody > tr > td{
+		padding:2px;
+	}
+
+}
+
+@media screen and (max-width: 1200px) {
+	.table > thead > tr > th.cliente-fornecedor,
+	.table > tbody > tr > td.cliente-fornecedor, 
+	.table > thead > tr > th.centro,
+	.table > tbody > tr > td.centro{
+		max-width: 10px;
+	}
+
+	.table > tbody > tr > td{
+		padding:4px 8px;
+	}
+
+}
+
+
+/*@media screen and (max-width: 767px) {
+  .table-responsa {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 15px;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+  }
+  .table-responsa > .table {
+    margin-bottom: 0;
+  }
+  .table-responsa > .table > thead > tr > th,
+  .table-responsa > .table > tbody > tr > th,
+  .table-responsa > .table > tfoot > tr > th,
+  .table-responsa > .table > thead > tr > td,
+  .table-responsa > .table > tbody > tr > td,
+  .table-responsa > .table > tfoot > tr > td {
+    white-space: nowrap;
+  }
+
+  .table-responsa > .table-bordered {
+    border: 0;
+  }
+  .table-responsa > .table-bordered > thead > tr > th:first-child,
+  .table-responsa > .table-bordered > tbody > tr > th:first-child,
+  .table-responsa > .table-bordered > tfoot > tr > th:first-child,
+  .table-responsa > .table-bordered > thead > tr > td:first-child,
+  .table-responsa > .table-bordered > tbody > tr > td:first-child,
+  .table-responsa > .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+  }
+  .table-responsa > .table-bordered > thead > tr > th:last-child,
+  .table-responsa > .table-bordered > tbody > tr > th:last-child,
+  .table-responsa > .table-bordered > tfoot > tr > th:last-child,
+  .table-responsa > .table-bordered > thead > tr > td:last-child,
+  .table-responsa > .table-bordered > tbody > tr > td:last-child,
+  .table-responsa > .table-bordered > tfoot > tr > td:last-child {
+    border-right: 0;
+  }
+  .table-responsa > .table-bordered > tbody > tr:last-child > th,
+  .table-responsa > .table-bordered > tfoot > tr:last-child > th,
+  .table-responsa > .table-bordered > tbody > tr:last-child > td,
+  .table-responsa > .table-bordered > tfoot > tr:last-child > td {
+    border-bottom: 0;
+  }
+}
