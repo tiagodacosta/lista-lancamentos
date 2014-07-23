@@ -1,5 +1,11 @@
 /*Estilos básicos tabela de lançamentos*/
 
+.table-lancamentos{
+	/*para o IE*/
+	table-layout:fixed;
+	width: 100%; 
+}
+
 .table > thead > tr > th {
 	text-transform: uppercase;
 	font-weight: normal;
@@ -9,7 +15,8 @@
 
 .table > tbody > tr > td {
 	font-size: 14px;
-	line-height: 2;
+	vertical-align: middle;
+	height: 50px;
 	/*font-family: "roboto"*/
 }
 
@@ -42,7 +49,7 @@
 .table > thead > tr > th.categoria,
 .table > tbody > tr > td.categoria {
 	white-space:nowrap;
-	max-width:20px;
+	width:15%;
 	overflow:hidden;
 	text-overflow:clip;
 	position: relative;
@@ -51,7 +58,7 @@
 .table > thead > tr > th.descricao,
 .table > tbody > tr > td.descricao {
 	white-space:nowrap;
-	max-width:40px;
+	width:30%;
 	overflow:hidden;
 	text-overflow:ellipsis;
 	position: relative;
@@ -61,7 +68,7 @@
 .table > thead > tr > th.centro,
 .table > tbody > tr > td.centro {
 	white-space:nowrap;
-	max-width:10px;
+	width:10%;
 	overflow:hidden;
 	text-overflow:ellipsis;
 	position: relative;
@@ -70,7 +77,7 @@
 .table > thead > tr > th.cliente-fornecedor,
 .table > tbody > tr > td.cliente-fornecedor {
 	white-space:nowrap;
-	max-width:20px;
+	width:10%;
 	overflow:hidden;
 	text-overflow:ellipsis;
 	position: relative;
@@ -78,7 +85,7 @@
 
 .table > thead > tr > th.parcela,
 .table > tbody > tr > td.parcela {
-	width: 50px;
+	width: 70px;
 	text-align: right;
 }
 
@@ -120,11 +127,12 @@
     top: 0;
     right: 0;
     content:" ";
-	background: -moz-linear-gradient(right, #FFFFFF 0%, transparent 100%);
-	background: -webkit-linear-gradient(right, #FFFFFF 0%,transparent 100%);
-	background: -o-linear-gradient(right, #FFFFFF 0%,transparent 100%);
-	background: -ms-linear-gradient(right, #FFFFFF 0%,transparent 100%);
-	background: linear-gradient(right, #000 0%,transparent 100%);
+	/*gradient chrome & firefox*/
+	background: -moz-linear-gradient(right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: -webkit-linear-gradient(right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: -ms-linear-gradient(right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: linear-gradient(right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
 
 .table > tbody > tr > td.descricao{
@@ -185,11 +193,11 @@
 }
 
 .table > tbody > tr.realizado > td.categoria:after{
-	background: -moz-linear-gradient(right, #EEEEEE 0%, transparent 100%);
-	background: -webkit-linear-gradient(right, #EEEEEE 0%,transparent 100%);
-	background: -o-linear-gradient(right, #EEEEEE 0%,transparent 100%);
-	background: -ms-linear-gradient(right, #EEEEEE 0%,transparent 100%);
-	background: linear-gradient(right, #EEEEEE 0%,transparent 100%);
+	background: -moz-linear-gradient(right, rgba(238,238,238,1) 0%, rgba(238,238,238,0) 100%);
+	background: -webkit-linear-gradient(right, rgba(238,238,238,1) 0%,rgba(238,238,238,0) 100%);
+	background: -o-linear-gradient(right, rgba(238,238,238,1) 0%,rgba(238,238,238,0) 100%);
+	background: -ms-linear-gradient(right, rgba(238,238,238,1) 0%,rgba(238,238,238,0) 100%);
+	background: linear-gradient(right, rgba(238,238,238,1) 0%,rgba(238,238,238,0) 100%);
 }
 
 /*linha hover*/
@@ -199,16 +207,16 @@
 }
 
 .table > tbody > tr:hover > td.categoria:after{
-	background: -moz-linear-gradient(right, #ffffd5 0%, transparent 100%);
-	background: -webkit-linear-gradient(right, #ffffd5 0%,transparent 100%);
-	background: -o-linear-gradient(right, #ffffd5 0%,transparent 100%);
-	background: -ms-linear-gradient(right, #ffffd5 0%,transparent 100%);
-	background: linear-gradient(right, #ffffd5 0%,transparent 100%);
+	background: -moz-linear-gradient(right, rgba(255,255,213,1) 0%, rgba(255,255,213,0) 100%);
+	background: -webkit-linear-gradient(right, rgba(255,255,213,1) 0%,rgba(255,255,213,0) 100%);
+	background: -o-linear-gradient(right, rgba(255,255,213,1) 0%,rgba(255,255,213,0) 100%);
+	background: -ms-linear-gradient(right, rgba(255,255,213,1) 0%,rgba(255,255,213,0) 100%);
+	background: linear-gradient(right, rgba(255,255,213,1) 0%,rgba(255,255,213,0) 100%);
 }
 
 /*responsividade para telas menores*/
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
 	.table > thead > tr > th.cliente-fornecedor,
 	.table > tbody > tr > td.cliente-fornecedor, 
 	.table > thead > tr > th.centro,
@@ -217,21 +225,16 @@
 	}
 
 	.table > tbody > tr > td{
-		padding:2px;
+		padding:2px 8px;
+		font-size: 13px;
 	}
 
 }
 
 @media screen and (max-width: 1200px) {
-	.table > thead > tr > th.cliente-fornecedor,
-	.table > tbody > tr > td.cliente-fornecedor, 
-	.table > thead > tr > th.centro,
-	.table > tbody > tr > td.centro{
-		max-width: 10px;
-	}
 
 	.table > tbody > tr > td{
-		padding:4px 8px;
+		height: 30px;
 	}
 
 }

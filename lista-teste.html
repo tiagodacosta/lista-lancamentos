@@ -17,7 +17,7 @@
 <body>
 <div class="bs-example">
     <div class="table-responsa"> 
-        <table class="table">
+        <table class="table table-lancamentos">
             <thead>
                 <tr>
                     <th class="check"><input type="checkbox"></th>
@@ -30,7 +30,7 @@
                     <th class="parcela">Parcela</th>                 
                     <th class="valor">Valor</th>
                     <th class="saldo">Saldo</th>
-                    <th></th>
+                    <th class="acao"></th>
                 </tr>
             </thead>
             <tbody>
@@ -54,9 +54,30 @@
                     <td class="acao"><span class="glyphicon glyphicon-time"></span> Receber</td>
                 </tr>
 
+                <tr class="realizado">
+                    <td class="check"><input type="checkbox"></td>
+                    <td class="data">31 dez</td>
+                    <td class="composto"><span class="glyphicon glyphicon-chevron-right"></span><span> 2</span></td>
+                    <td class="categoria">
+                        <span class="label label-success">Projeto Godzilla</span>
+                        <span class="label label-danger">Melancias</span>
+                    </td>
+                    <td class="descricao">
+                        <span> 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui.
+                        </span>
+                    </td>
+                    <td class="centro">Filial 1, Matriz</td>
+                    <td class="cliente-fornecedor">Companhia de abastecimento de água de São Paulo</td>
+                    <td class="parcela"><span class="label label-parcela"> <span class="glyphicon glyphicon-refresh"></span></span></td>
+                    <td class="valor">33.380.000,00</td>
+                    <td class="saldo">25.000,00</td>
+                    <td class="acao"><span class="glyphicon glyphicon-check"></span> Recebido</td>
+                </tr>
+
                 <tr class="nao-realizado">
                     <td class="check"><input type="checkbox" disabled></td>
-                    <td class="data">27 dez</td>
+                    <td class="data">31 dez</td>
                     <td class="composto"><span class="glyphicon glyphicon-chevron-down"></span><span> 3</span></td>
                     <td class="categoria">
                         <span class="label label-warning">Alimentação</span>
@@ -136,26 +157,6 @@
                         <td class="acao"></td>
                     </tr>
 
-                <tr class="realizado">
-                    <td class="check"><input type="checkbox"></td>
-                    <td class="data">31 dez</td>
-                    <td class="composto"><span class="glyphicon glyphicon-chevron-right"></span><span> 2</span></td>
-                    <td class="categoria">
-                        <span class="label label-success">Projeto Godzilla</span>
-                        <span class="label label-danger">Melancias</span>
-                    </td>
-                    <td class="descricao">
-                        <span> 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui.
-                        </span>
-                    </td>
-                    <td class="centro">Filial 1, Matriz</td>
-                    <td class="cliente-fornecedor">Companhia de abastecimento de água de São Paulo</td>
-                    <td class="parcela"><span class="label label-parcela"> <span class="glyphicon glyphicon-refresh"></span></span></td>
-                    <td class="valor">33.380.000,00</td>
-                    <td class="saldo">25.000,00</td>
-                    <td class="acao"><span class="glyphicon glyphicon-check"></span> Recebido</td>
-                </tr>
             </tbody>
         </table>
     </div>
